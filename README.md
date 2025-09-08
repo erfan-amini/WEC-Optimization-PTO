@@ -1,16 +1,15 @@
-````markdown
-# Wave Energy Converter Power Take-Off Optimization using Multi-Verse Optimizer (MVO)
+# Wave Energy Converter Power Take‑Off Optimization using Multi‑Verse Optimizer (MVO)
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2019b+-orange.svg)](https://www.mathworks.com/products/matlab.html)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 📋 Overview
 
-This repository contains the MATLAB implementation of the **Multi-Verse Optimizer (MVO)** algorithm for optimizing Power Take-Off (PTO) parameters of a fully-submerged three-tether Wave Energy Converter (WEC). The code accompanies the research paper:
+This repository contains the MATLAB implementation of the **Multi‑Verse Optimizer (MVO)** algorithm for optimizing Power Take‑Off (PTO) parameters of a fully‑submerged three‑tether Wave Energy Converter (WEC). The code accompanies the research paper:
 
-> **A Comparative Study of Metaheuristic Algorithms for Wave Energy Converter Power Take-Off Optimisation: A Case Study for Eastern Australia**  
-> Amini, E., Golbaz, D., Asadi, R., Nasiri, M., Ceylan, O., Majidi Nezhad, M., & Neshat, M. (2021).  
-> *Journal of Marine Science and Engineering*, 9(5), 490.  
+> **A Comparative Study of Metaheuristic Algorithms for Wave Energy Converter Power Take‑Off Optimisation: A Case Study for Eastern Australia**
+> Amini, E., Golbaz, D., Asadi, R., Nasiri, M., Ceylan, O., Majidi Nezhad, M., & Neshat, M. (2021).
+> *Journal of Marine Science and Engineering*, 9(5), 490.
 > DOI: [10.3390/jmse9050490](https://doi.org/10.3390/jmse9050490)
 
 ## 🎯 Purpose
@@ -47,16 +46,16 @@ wave-energy-converter-mvo/
     ├── Sydney_PTO_MVO_NUni_25_id_2.mat
     ├── Sydney_PTO_MVO_NUni_25_id_3.mat
     └── Sydney_PTO_MVO_NUni_25_id_4.mat
-````
+```
 
 ## 🔧 Requirements
 
 * **MATLAB** R2019b or later
-* Required toolboxes:
+* Toolboxes:
 
   * Optimization Toolbox
   * Statistics and Machine Learning Toolbox
-* **WEC-Sim** toolbox dependencies (for wave energy converter simulation)
+* **WEC‑Sim** toolbox dependencies (for WEC simulation)
 * NetCDF support for reading wave data
 
 ## 🚀 Getting Started
@@ -81,9 +80,6 @@ addpath(genpath('wave-energy-converter-mvo'))
 1. **Main optimization run:**
 
 ```matlab
-% Navigate to src folder
-cd src/
-
 % Run the main MVO optimization
 Main_MVO
 ```
@@ -105,12 +101,12 @@ main
 
 ## 📊 Data Description
 
-### Input Data (`DATA/` folder)
+### Input Data (`DATA/`)
 
 1. **`04Sydney.nc`** — Wave hindcast dataset
 
-   * **Coverage:** 1979-01-01 to 2013-05-31 (hourly data)
-   * **Location:** Sydney coast (152.5°E, -34.0°S)
+   * **Coverage:** 1979‑01‑01 to 2013‑05‑31 (hourly)
+   * **Location:** Sydney coast (152.5°E, −34.0°S)
    * **Variables:**
 
      * `hs` — Significant wave height (m)
@@ -118,25 +114,24 @@ main
      * `tm0m1` — Mean wave period (s)
      * `dir` — Wave direction (degrees)
    * **Records:** \~301,680 hourly observations
-
-2. **`ptoParameters.mat`** — Pre-calculated optimal PTO parameters
+2. **`ptoParameters.mat`** — Pre‑calculated optimal PTO parameters
 
    * Contains lookup tables for different buoy radii
-   * Frequency-dependent **kPTO** and **dPTO** values
+   * Frequency‑dependent **kPTO** and **dPTO** values
 
-### Output Data (`RESULTS/` folder)
+### Output Data (`RESULTS/`)
 
 Each `.mat` file contains:
 
 * `generation[400]` — Array of best fitness values per iteration
-* Represents independent optimization runs (id\_1 to id\_4)
-* Can be used for statistical analysis and convergence studies
+* Represents independent optimization runs (`id_1` to `id_4`)
+* Useful for statistical analysis and convergence studies
 
 ## 📈 Algorithm Details
 
-### Multi-Verse Optimizer (MVO)
+### Multi‑Verse Optimizer (MVO)
 
-The MVO algorithm simulates the concept of multi-verse theory in physics:
+The MVO algorithm simulates the concept of multi‑verse theory in physics:
 
 * **White holes:** Transfer objects between universes (exploration)
 * **Black holes:** Attract objects (exploitation)
@@ -161,8 +156,8 @@ Key parameters:
 The optimization results show:
 
 * **Best power output:** \~272.5 kW (MVO algorithm)
-* **Convergence:** Typically within 6,000-8,000 evaluations
-* **Performance ranking:** MVO > CMA-ES > GWO > GOA > HHO
+* **Convergence:** Typically within 6,000–8,000 evaluations
+* **Performance ranking:** MVO > CMA‑ES > GWO > GOA > HHO
 
 To analyze results:
 
@@ -184,7 +179,7 @@ title('MVO Convergence Curve');
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! Please open an issue to discuss major changes before submitting a PR.
 
 ## 📝 Citation
 
@@ -204,25 +199,15 @@ If you use this code in your research, please cite:
 }
 ```
 
-## 👥 Authors
-
-* **Erfan Amini** - University of Tehran
-* **Danial Golbaz** - University of Tehran
-* **Rojin Asadi** - University of Tehran
-* **Mahdieh Nasiri** - Iran University of Science and Technology
-* **Oğuzhan Ceylan** - Kadir Has University
-* **Meysam Majidi Nezhad** - Sapienza University of Rome
-* **Mehdi Neshat** - University of Adelaide (Corresponding author)
-
 ## 📧 Contact
 
-For questions or collaborations, please contact:
+For questions or collaborations:
 
-* Mehdi Neshat: [mehdi.neshat@adelaide.edu.au](mailto:mehdi.neshat@adelaide.edu.au)
+* **Mehdi Neshat** — [mehdi.neshat@adelaide.edu.au](mailto:mehdi.neshat@adelaide.edu.au)
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -233,6 +218,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Note:** This is research code. While we strive for accuracy, please verify results independently for production use.
-
-```
-```
