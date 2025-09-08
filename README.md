@@ -23,8 +23,6 @@ wave-energy-converter-mvo/
 │
 ├── README.md                    # This file
 ├── LICENSE                      # License information
-│
-├── src/                         # Source code files
 │   ├── Main_MVO.m               # Main script to run optimization
 │   ├── MVO.m                    # Multi-Verse Optimizer implementation
 │   ├── transformation.m         # Transform optimization variables to WEC parameters
