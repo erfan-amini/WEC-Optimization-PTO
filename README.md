@@ -53,8 +53,7 @@ wave-energy-converter-mvo/
 
   * Optimization Toolbox
   * Statistics and Machine Learning Toolbox
-* **WEC‑Sim** toolbox dependencies (for WEC simulation)
-* NetCDF support for reading wave data
+  * NetCDF support for reading wave data
 
 ## 🚀 Getting Started
 
